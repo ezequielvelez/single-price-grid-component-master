@@ -8,9 +8,146 @@
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
+    position: relative;
+    min-height: 100vh;
     font-family: "Karla", sans-serif;
     font-size: 16px;
+    margin: 0;
+    padding-top: 17.5vh;
+    padding-bottom: 22.5vh;
+    background-color: hsl(218, 22%, 90%);
 }
 
 /*Mobile first*/
+
+
+
+/*contenedor y estructura*/
+.container {
+    width: 350px;
+    height: auto;
+    min-height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+
+
+/*tarjetas individuales*/
+.card {
+    padding: 2em 2em;
+}
+
+
+.card--white {
+    background-color: white;
+    color: var(--grayish-blue); /*vamos a arreglarmo mas tarde*/
+}
+
+.card--cyan {
+    background-color: var(--cyan);
+    color: white; /*vamos a arreglarmo mas tarde*/
+}
+
+.card--light-cyan {
+    background-color: hsl(179, 40%, 60%); 
+    color: white /*vamos a arreglarmo mas tarde*/
+}
+
+
+
+/*Componentes internos*/
+.card__paragraph,
+.card__title {
+    margin: 0;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: .9em;
+}
+
+
+.card__paragraph {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.card__button {
+    display: block;
+    margin-top: 2em;
+    width: 100%;
+    height: 3.5em;
+    border-radius: 8px;
+    background-color: var(--bright-yellow);
+    text-align: center;
+    line-height: 3.5;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+.card ul {
+    margin: 0;
+}
+
+/*Detalles estilísticos*/
+.card__title--cyan {
+    color:hsl(179, 62%, 43%);
+}
+
+.card__title--white{
+    color: white;
+}
+.card__paragraph--big {
+    font-size: 2em;
+}
+
+.card__paragraph--small {
+    font-size: .5em;
+}
+
+.card__paragraph--lemmon {
+    margin-bottom: 1.3rem;
+    font-weight: 700;
+    color:hsl(71, 73%, 54%);
+}
+
+.card__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card__list-item {
+    margin-bottom: .5em;
+}
+
+
+
+/*footer*/
+.footer {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
